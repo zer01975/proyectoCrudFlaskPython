@@ -1,0 +1,187 @@
+:root {
+  --fondo-principal: #0a1a2a;
+  --fondo-secundario: #0a141d;
+  --fondo-vistazo: #1a3958;
+
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  flex: 1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+}
+select,label,button{
+  margin: 10px ;
+}
+.cardProductos{
+  width: 300px;
+  margin:10px 0;
+} 
+
+
+ /* despues persomaliza las carda de nuestrosproductos asi no afecta al formluario */ 
+
+/*:::::Header*/
+
+/*---Nav---*/
+
+#barraNav{
+  position: sticky;
+ z-index: 1000;
+ top: 0px;
+ 
+ padding-top: 2px;
+ padding-bottom: 2px;
+
+}
+
+.carousel-control-circle {
+  background-color: #333; /* Color del círculo */
+  border: 1px solid #333; /* Borde del círculo */
+  height: 40px; /* Altura del círculo */
+  width: 40px; /* Ancho del círculo */
+  line-height: 40px; /* Centra el icono verticalmente en el círculo */
+  border-radius: 50%; /* Hace que el borde sea redondeado */
+  color: #fff; /* Color del icono dentro del círculo */
+}
+
+/* Estilos adicionales para el ícono de los controles */
+.carousel-control-circle span {
+  font-size: 20px; /* Tamaño del ícono */
+}
+
+
+
+
+
+ #myCarousel{
+  padding-bottom: 2px;
+  overflow: hidden;
+} */
+/*   .other-section{
+    height: 400px;
+}
+.bg-blue{
+    background-color: blue;
+}
+.bg-red{
+    background-color: red;
+} */
+       /*    .carousel-item img{
+              padding-top: 5px;
+              width: 1280px;
+              height:720px;
+              border-radius: 8px;
+          } */
+      
+#logo-menu {
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding: 5PX;
+}
+
+
+/*:::::Pie de Pagina agragdo*/
+.pie-pagina {
+  width: 100%;
+  background-color: var(--fondo-secundario);
+  margin-top: auto; /* Esta propiedad empujará el pie de página hacia la parte inferior */
+}
+/*:::::Pie de Pagina*/
+
+
+.pie-pagina {
+  width: 100%;
+  background-color: var(--fondo-secundario);
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box .logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .logo img {
+  width: 150px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box li a {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .box li a:hover {
+  color: yellow;
+
+}
+
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: var(--fondo-principal);
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.pie-pagina .grupo-2 {
+  font-size: 15px;
+}
+.filtros{
+  border: 1px, solid,black;
+}
+@media screen and (max-width:800px) {
+  .pie-pagina .grupo-1 {
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+      padding: 35px 0px;
+  }
+}

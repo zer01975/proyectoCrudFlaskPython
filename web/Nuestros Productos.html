@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSL2</title>
+
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <header id="barraNav">
+        <!-- ... (código del encabezado) ... -->
+    </header>
+    <main>
+
+
+
+        <div class="container" id="app2">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <select name="subtipo" id="subtipo" v-model="subtipo">
+                            <option value="">Todos</option>
+                            <option v-for="elemento in subtipos" :value="elemento">{{elemento}}</option>
+                        </select>
+                        <button v-on:click="filtarDatos()">Filtrar</button>
+                    </div>
+                  
+
+                    
+                </div>
+                <div class="row" >
+                    <div class="form-group col-md-6">
+                        <label>Por precio:</label>
+                        <input type="radio" name="orden" id="ordenPrecioAsc">Menor a mayor  
+                        <input type="radio" name="orden" id="ordenPrecioDesc">Mayor a menor
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div>
+                           
+                            <label>Alfabético: </label>
+                                <input type="radio" name="orden" id="ordenNombreAsc">A-Z 
+                                <input type="radio" name="orden" id="ordenNombreDesc">Z-A
+                                                                                                          
+                            <button v-on:click="ordenarDatos()">Ordenar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- ... (contenido principal) ... -->
+            <div class="container d-flex flex-row flex-wrap justify-content-around ">
+                <div v-for="elemento in datosFinales" class="cardProductos">
+                    <img class="card-img-top" v-bind:src="elemento.foto" :alt="elemento.nombre">
+                    <div class="card-body">
+                        <h5 class="card-text">{{elemento.nombre}}</h5>
+                        <p class="card-text"> {{elemento.descripcion}} </p>
+                        <p class="card-text">$ {{elemento.precio}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="pie-pagina" id="idfooter">
+        <!-- ... (contenido del pie de página) ... -->
+    </footer>
+
+    <!-- Librerías de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <!-- Librería de Font Awesome -->
+    <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+
+    <!-- Librería de Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--para el filtrado-->
+    <!-- Scripts específicos  proyecto -->
+    <script src="js/index.js"></script>
+    <script src="./js/productos_main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSL2</title>
+
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+        
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <header id="barraNav">
+
+    </header>
+    <main style="margin: 1% 20%;">
+        <!-- <div class="container">
+            <h1>Modificacion Productos</h1>
+            <form id='appUpdate' class="formulario">
+                <div class="mb-3">
+                    <label for="txtId">Id</label>
+                    <input type="text" class="form-control" name="txtId" id="txtId" :value="productos.id" disabled><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtNombre">Nombre:</label>
+                    <input type="text" class="form-control" name="txtNombre" id="txtNombre"
+                        :value="productos.nombre"><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtDescripcion">Descripcion:</label>
+                    <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion"
+                        :value="productos.descripcion"><br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtSubtipo">Categoría:</label>
+                    <select name="select" id="txtSubtipo">
+
+                        <option v-for="dato in subtipos" :value="dato.descripcion">{{dato.descripcion}}</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="txtPrecio">Precio:</label>
+                    <input type="text" class="form-control" name="txtPrecio" id="txtPrecio" :value="productos.precio">
+                    <br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtStock">Stock:</label>
+                    <input type="number" class="form-control" name="txtStock" id="txtStock" :value="productos.stock">
+                    <br>
+                </div>
+                <div class="mb-3">
+                    <label for="txtFoto">Foto</label>
+                    <input type="text" class="form-control" name="txtFoto" id="txtFoto" :value="productos.foto"> <br>
+                </div>
+
+
+
+                <button type="button" class="btn btn-success" onclick="modificarProductos()">Grabar</button>
+                <br><br><br>
+            </form>
+          
+        </div> -->
+        <div class="cardModal">
+            <div class="modal-content">
+                <h1 class="card-title">Modificacion Productos</h1>
+                <form id='appUpdate' class="formulario">
+                    <div class="row">
+                        <div class="col-md-4 mb-1">
+                            <label for="txtId">Id</label>
+                            <input type="text" class="form-control" name="txtId" id="txtId" :value="productos.id"
+                                disabled>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="txtNombre">Nombre:</label>
+                            <input type="text" class="form-control" name="txtNombre" id="txtNombre"
+                                :value="productos.nombre">
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        
+                        <div class="col-md-4 mb-3">
+                            <label for="txtDescripcion">Descripcion:</label>
+                            <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion"
+                                :value="productos.descripcion">
+                        </div>
+                        <div class="col-md-4 mb-2" >
+                            <label for="txtSubtipo">Categoría:</label>
+                            <select class="form-control" name="select" id="txtSubtipo">
+                                <option disabled selected>Selecciona una opción</option>
+                                <option v-for="dato in subtipos" :value="dato.descripcion">{{dato.descripcion}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="txtPrecio">Precio:</label>
+                            <input type="text" class="form-control" name="txtPrecio" id="txtPrecio"
+                                :value="productos.precio">
+
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="txtStock">Stock:</label>
+                            <input type="number" class="form-control" name="txtStock" id="txtStock"
+                                :value="productos.stock">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="txtFoto">Foto</label>
+                            <input type="url" class="form-control" name="txtFoto" id="txtFoto" :value="productos.foto">
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-success" onclick="modificarProductos()">Grabar</button>
+                    <a type="button" href="productos.html" class="btn btn-success" onclick="">Volver</a>
+                </form>
+                <div>
+              
+                    <img id="vistaPrevia" src="" alt="Vista Previa"
+                        style="max-width: 100%; max-height: 150px; margin-top: 10px; display: none;">
+
+                    </div>
+                    <script>function mostrarVistaPrevia() {
+                            var urlImagen = document.getElementById('txtFoto').value;
+                            var vistaPrevia = document.getElementById('vistaPrevia');
+
+                            if (urlImagen.trim() !== '') {
+                                vistaPrevia.src = urlImagen;
+                                vistaPrevia.style.display = 'block';
+                            } else {
+                                vistaPrevia.src = '';
+                                vistaPrevia.style.display = 'none';
+                            }
+                        }
+
+                        // Evento para actualizar la vista previa cuando se cambia el valor del campo de la URL de la imagen
+                        document.getElementById('txtFoto').addEventListener('input', mostrarVistaPrevia);
+                    </script>
+
+                </div>
+            </div>
+       
+    </main>
+    <footer >
+
+    </footer>
+
+    <!-- Librerías de Bootstrap y jQuery -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+   crossorigin="anonymous"></script>
+   <!-- Librería de Font Awesome -->
+   <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+
+   <!-- Librería de Vue.js -->
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+ 
+     <!-- Scripts específicos  proyecto -->
+
+
+    <script src="js/index.js"></script>
+    <script src="./js/productos_update.js"></script>
+    <script src="./js/subtipos_main.js"></script>
+</body>
+
+</html>
