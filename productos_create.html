@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSL2</title>
 
-    <link rel="icon" type="image/png" href="">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSL2</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilo.css">
-  </head>
-  <body >
-    <header id="barraNav">
-    </header>
-    <main>
-      <div class="container mt-5" >
-        <div class="cardModal">
-          <div class="card-body" >
-            <h1 class="card-title">Alta Producto</h1>
-            <form   action="index.html" class="formulario" id="productoForm" >
-              <div class="row"></div>
-              <div class="row">
-                <div class="col-md-4 mb-3">
-                  <label for="txtNombre">Nombre:</label>
-                  <input type="text" class="form-control" name="txtNombre" id="txtNombre">
-                </div>
-                <div class="col-md-4 mb-3">
-                  <label for="txtDescripcion">Descripción:</label>
-                  <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion">
-                </div>
-                <div class="col-md-4 mb-3" id="appSubtipo">
-                  <label for="txtSubtipo">Categorías:</label>
-                  <select class="form-control" name="select" id="txtSubtipo">
-                    <option disabled selected>Selecciona una opción</option>
-                    <option v-for="dato in datos" :value="dato.descripcion">{{dato.descripcion}}</option>
-                  </select>
-                </div>
+  <link rel="icon" type="image/png" href="">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./img/logo2 (6).jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+  <header id="barraNav">
+  </header>
+  <main>
+    <div class="container mt-5">
+      <div class="cardModal">
+        <div class="card-body">
+          <h1 class="card-title">Alta Producto</h1>
+          <form action="index.html" class="formulario" id="productoForm">
+            <div class="row"></div>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="txtNombre">Nombre:</label>
+                <input type="text" class="form-control" name="txtNombre" id="txtNombre">
               </div>
-
-              <div class="row">
-                <div class="col-md-4 mb-3">
-                  <label for="txtPrecio">Precio:</label>
-                  <input type="text" class="form-control" name="txtPrecio" id="txtPrecio">
-                </div>
-                <div class="col-md-4 mb-3">
-                  <label for="txtStock">Stock:</label>
-                  <input type="number" class="form-control" name="txtStock" id="txtStock">
-                </div>
-                <div class="col-md-4 mb-3">
-                  <label for="txtFoto">Foto</label>
-                  <input value="" type="url" class="form-control" name="txtFoto" id="txtFoto">
-                </div>
+              <div class="col-md-4 mb-3">
+                <label for="txtDescripcion">Descripción:</label>
+                <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion">
               </div>
+              <div class="col-md-4 mb-3" id="appSubtipo">
+                <label for="txtSubtipo">Categorías:</label>
+                <select class="form-control" name="select" id="txtSubtipo">
+                  <option disabled selected>Selecciona una opción</option>
+                  <option v-for="dato in datos" :value="dato.descripcion">{{dato.descripcion}}</option>
+                </select>
+              </div>
+            </div>
 
-              <button type="button" class="btn btn-success" onclick="guardarProducto()">Grabar</button>
-              <a type="button"  href="productos.html" class="btn btn-success" onclick="">Volver</a>
-            </form>
-            <div >
-              <img id="vistaPrevia" src="" alt="Vista Previa" style="max-width: 100%; max-height: 150px; margin-top: 10px; display: none;">
-              <script>function mostrarVistaPrevia() {
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="txtPrecio">Precio:</label>
+                <input type="text" class="form-control" name="txtPrecio" id="txtPrecio">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="txtStock">Stock:</label>
+                <input type="number" class="form-control" name="txtStock" id="txtStock">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="txtFoto">Foto</label>
+                <input value="" type="url" class="form-control" name="txtFoto" id="txtFoto">
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="guardarProducto()">Grabar</button>
+            <a type="button" href="productos.html" class="btn btn-success" onclick="">Volver</a>
+          </form>
+          <div>
+            <img id="vistaPrevia" src="" alt="Vista Previa"
+              style="max-width: 100%; max-height: 150px; margin-top: 10px; display: none;">
+            <script>function mostrarVistaPrevia() {
                 var urlImagen = document.getElementById('txtFoto').value;
                 var vistaPrevia = document.getElementById('vistaPrevia');
-                
+
                 if (urlImagen.trim() !== '') {
                   vistaPrevia.src = urlImagen;
                   vistaPrevia.style.display = 'block';
@@ -73,33 +77,34 @@
                   vistaPrevia.style.display = 'none';
                 }
               }
-              
+
               // Evento para actualizar la vista previa cuando se cambia el valor del campo de la URL de la imagen
               document.getElementById('txtFoto').addEventListener('input', mostrarVistaPrevia);
-              </script>
+            </script>
 
-            </div>
           </div>
         </div>
       </div>
-    </main>
-      <footer >
+    </div>
+  </main>
+  <footer>
 
-      </footer>
-      <script src="js/logout.js"></script>
-      <!-- Librerías de Bootstrap y jQuery -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </footer>
+  <script src="js/logout.js"></script>
+  <!-- Librerías de Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-      <!-- Librería de Font Awesome -->
-      <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+  <!-- Librería de Font Awesome -->
+  <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
 
-      <!-- Librería de Vue.js -->
-      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- Librería de Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
-      <script src="js/index.js"></script>
-      <script src="./js/subtipos_main.js"></script>
-      <!---con estas librerías pud meter la categoría-->
-    </body>
-  </html>
+  <script src="js/index.js"></script>
+  <script src="./js/subtipos_main.js"></script>
+  <!---con estas librerías pud meter la categoría-->
+</body>
+
+</html>

@@ -3,7 +3,7 @@ var cad = `
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
 <a class="navbar-brand" href="#">
-    <img src="img/logo (2).jpg" width="50" height="50" alt="Logo">
+    <img src="img/logo2 (1).jpeg" width="100" height="50" alt="Logo">
 </a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@ var cad = `
                 <a class="nav-link" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sucursales</a>
+                <a class="nav-link" href="sucursales.html">Sucursales</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="Nuestros Productos.html">Nuestros Productos</a>
@@ -57,7 +57,7 @@ cad = `
 <div class="grupo-1">
 <div class="logo">
     <a href="#">
-        <img src="img/logo (2).jpg" alt="Logo de SLee Dw">
+        <img src="img/logo2 (2).jpeg" alt="Logo de SLee Dw">
     </a>
 </div>
 <div class="box">
