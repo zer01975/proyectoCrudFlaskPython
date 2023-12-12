@@ -30,7 +30,25 @@ select,label,button{
   width: 300px;
   margin:10px 0;
 } 
+#contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+#tabla-barrios {
+  border-collapse: collapse;
+  margin-top: 20px; /* Ajusta según sea necesario */
+}
+
+#tabla-barrios th, #tabla-barrios td {
+  padding: 10px; /* Ajusta según sea necesario */
+}
+
+iframe {
+  margin-bottom: 10px; /* Espacio entre iframes */
+  }
 
  /* despues persomaliza las carda de nuestrosproductos asi no afecta al formluario */ 
 
