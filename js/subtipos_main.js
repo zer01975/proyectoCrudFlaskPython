@@ -59,7 +59,7 @@ function guardarProducto() {
         foto:f
     }
     let url = "https://codo25537.pythonanywhere.com/productos"
-   // let url = "http://127.0.0.1:5000/productos"
+  
   
     var options = {
     body: JSON.stringify(producto),
