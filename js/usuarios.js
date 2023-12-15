@@ -90,6 +90,8 @@ createApp({
                         sessionStorage.setItem("adm",1)  
                        
                     }
+
+                  alert('Bienvenido ' + this.usuarios[i].usuario);
                     window.location.href = "./index.html";
                 }else{
                     alert('Clave erronea')
